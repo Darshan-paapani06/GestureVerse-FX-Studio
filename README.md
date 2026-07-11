@@ -1,93 +1,596 @@
-# GestureVerse FX Studio
+<div align="center">
+
+# ✨ GestureVerse FX Studio
+
+### **AI-powered real-time cinematic VFX controlled by human motion**
+
+Control energy shields, anime slashes, magic portals, elemental blasts, glowing eyes, power auras, and cinematic camera effects using only your webcam, hand gestures, and upper-body movement.
+
+<br />
 
 **Created by Darshan Paapani**
 
-GestureVerse FX Studio is an offline-capable, real-time cinematic VFX application controlled by hand gestures and upper-body motion. It ships as a React web/PWA project and a Capacitor Android project using the same codebase.
+<br />
 
-## What is included
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=0b1220)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-On--Device_AI-00A67E?style=for-the-badge&logo=google&logoColor=white)
+![Capacitor](https://img.shields.io/badge/Capacitor-Android_APK-119EFF?style=for-the-badge&logo=capacitor&logoColor=white)
+![PWA](https://img.shields.io/badge/PWA-Offline_Ready-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white)
 
-- Hand tracking for up to two hands
-- Upper-body pose tracking
-- Optional face tracking with glowing eyes, energy mask, and crown/aura
-- Hybrid gesture engine: landmark geometry + temporal motion history + hold/release states
-- 15 procedural VFX across Superhero, Anime, Magic, and Elements
-- Gesture mapper and effect colour customization
-- Real, blurred, or uploaded camera backgrounds
-- Built-in ambient audio, uploaded music, and procedural sound effects
-- Screenshot vault and composed canvas recording
-- Landscape, portrait, and square stage modes
-- Eco, Balanced, and Cinematic performance profiles
-- Mirrored camera by default with normal-orientation toggle
-- Offline PWA service worker and locally bundled AI runtimes/models
-- Android 10+ project with native save/share export flow
-- No account, cloud API, or paid service required
+<br />
 
-## Headline gestures
+> **GestureVerse FX Studio** transforms a normal webcam into a motion-driven visual effects stage. It combines hand landmark detection, upper-body pose tracking, optional face mesh overlays, gesture state machines, procedural particle animation, sound synchronization, local recording, and Android packaging into one futuristic creative studio.
 
-| Gesture | Default power |
+<br />
+
+[🚀 Features](#-features) • [🧠 AI Pipeline](#-ai--gesture-intelligence) • [🎬 Effects](#-cinematic-effect-library) • [⚙️ Workflow](#️-advanced-project-workflow) • [🌐 Deploy](#-deploy-to-github-pages) • [📱 Android](#-android-apk-build)
+
+</div>
+
+---
+
+## 🌌 Project Vision
+
+GestureVerse FX Studio is built as a **college final project with portfolio-grade presentation quality**. The goal is not just to detect gestures, but to create a complete cinematic studio where motion becomes an input language for real-time digital powers.
+
+The application turns this simple idea:
+
+```text
+Webcam + Human Gesture → AI Tracking → Gesture Engine → Cinematic VFX + Sound + Recording
+```
+
+into a polished product experience:
+
+```text
+Enter Studio → Calibrate Camera → Perform Gesture → Trigger Power → Record Scene → Export Capture
+```
+
+---
+
+## 🚀 Features
+
+### 🎥 Real-time camera studio
+
+- Live webcam stage with mirrored camera mode
+- Normal-orientation toggle
+- Responsive desktop layout
+- Landscape, portrait, and square capture modes
+- Full-screen presentation-friendly interface
+- Camera permission and status feedback
+
+### 🖐️ Motion and gesture control
+
+- Hand tracking for gesture input
+- Upper-body pose tracking for body-aware effects
+- Optional face mesh tracking
+- Static gesture detection
+- Motion-based temporal gestures
+- Gesture confidence scoring
+- Hold/release gesture states
+- Gesture cooldown system to prevent accidental spam
+
+### 🧪 Cinematic effect laboratory
+
+- 15 polished procedural VFX powers
+- Superhero, Anime, Magic, and Elements categories
+- Adjustable intensity
+- Adjustable particle density
+- Glow control
+- Screen-shake toggle
+- Custom effect colours
+- Manual effect trigger for demonstration
+
+### 🎵 Audio and motion feedback
+
+- Built-in cinematic ambient soundtrack
+- User-uploaded background music
+- Procedural activation sounds
+- Procedural impact sounds
+- Audio reacts to gesture-triggered powers
+
+### 🖼️ Background studio
+
+- Real camera background
+- Blur background mode
+- Uploaded background images
+- Dark cinematic presentation mode
+- Local background persistence
+
+### 📸 Capture vault
+
+- Screenshot capture
+- Composed video recording
+- WebM recording support on the website
+- MP4-compatible export path on Android when available
+- Session-based capture gallery
+- Local browser downloads
+- Android-native save/share flow
+
+### 📦 Offline and cross-platform
+
+- Offline-capable PWA
+- Locally bundled MediaPipe assets
+- No mandatory login
+- No paid cloud API
+- No remote AI inference required
+- Android APK project through Capacitor
+- Android 10+ support
+
+---
+
+## 🧠 AI + Gesture Intelligence
+
+GestureVerse uses a hybrid recognition model that combines multiple layers of motion understanding.
+
+### 1. Landmark detection layer
+
+The app reads body information from local MediaPipe pipelines:
+
+```text
+Camera Frame
+   ↓
+MediaPipe Hands
+   ↓
+MediaPipe Pose
+   ↓
+Optional MediaPipe Face Mesh
+   ↓
+Normalized Landmark Coordinates
+```
+
+### 2. Geometric gesture layer
+
+Static poses are identified using distances, angles, and relative landmark positions.
+
+Examples:
+
+- Closed fist
+- Open palm
+- Crossed hands
+- Raised fist
+- Two open palms
+- Arms opened outward
+- Cupped hands
+
+### 3. Temporal motion layer
+
+Motion gestures are recognized from recent movement history rather than one frame alone.
+
+Examples:
+
+- Swipe left
+- Swipe right
+- Fast double swipe
+- Circular hand movement
+- Downward punch
+- Hands together then push
+- Pinch and rotate
+
+### 4. State machine layer
+
+Some powers need beginning, holding, charging, release, and cooldown states.
+
+Example: **Power Aura Charge**
+
+```text
+Both fists detected
+   ↓
+Start aura
+   ↓
+Hold fists
+   ↓
+Charge meter increases
+   ↓
+Open hands
+   ↓
+Ultimate release burst
+   ↓
+Cooldown
+```
+
+This makes the experience feel intentional, cinematic, and interactive rather than random.
+
+---
+
+## 🎬 Cinematic Effect Library
+
+### 🦸 Superhero powers
+
+| Power | Gesture | Motion Feeling |
+|---|---|---|
+| Energy Shield | Crossed hands | Defensive force-field lock |
+| Repulsor Blast | Palm thrust | Forward energy impact |
+| Thunder Strike | Raised fist | Sky-to-ground lightning strike |
+| Ground Shockwave | Downward punch | Radial impact wave |
+
+### ⚡ Anime powers
+
+| Power | Gesture | Motion Feeling |
+|---|---|---|
+| Power Aura Charge | Both fists | Charging energy aura |
+| Energy Slash | Swipe left/right | Directional blade trail |
+| Ultimate Energy Beam | Hands together then push | Focused beam release |
+| Teleport Afterimage | Fast double swipe | Speed clone / afterimage trail |
+
+### 🔮 Magic powers
+
+| Power | Gesture | Motion Feeling |
+|---|---|---|
+| Mystic Portal | Circular hand motion | Portal ring opening |
+| Magic Rune Circle | Pinch and rotate | Arcane symbol formation |
+| Phoenix Energy Bird | Arms opened outward | Flying energy creature |
+| Telekinetic Orb | Pinch and hold | Floating controllable energy ball |
+
+### 🌊 Elemental powers
+
+| Power | Gesture | Motion Feeling |
+|---|---|---|
+| Fireball | Cupped hands | Flame orb build-up |
+| Ice Blast | Two open palms | Cold burst and shards |
+| Wind Vortex | Two-hand circular motion | Spinning air tunnel |
+
+### 😎 Face effects
+
+Face effects are optional and disabled automatically in Eco mode.
+
+- Glowing eyes
+- Energy face mask
+- Head-following crown/aura
+
+---
+
+## 🎞️ Motion Design System
+
+GestureVerse uses a futuristic cinematic interface inspired by holographic control rooms, energy fields, and high-contrast sci-fi dashboards.
+
+### Visual language
+
+- Deep black and dark navy base
+- Electric cyan highlights
+- Violet secondary glow
+- Fire and danger accents for elemental effects
+- Glassmorphism panels
+- Holographic HUD rings
+- Particle trails
+- Radial glow fields
+- Smooth transitions
+- Animated landing energy disc
+
+### Interface motion
+
+- Floating logo mark
+- Rotating energy rings
+- Pulsing hand aura
+- Hover-reactive effect cards
+- Confidence meter animation
+- Charge meter animation
+- Toast entry animation
+- Modal fade and blur transitions
+- Camera-stage screen shake during impact powers
+
+---
+
+## 🏗️ System Architecture
+
+```text
+GestureVerse FX Studio
+│
+├── Camera Layer
+│   ├── Webcam permission
+│   ├── Device selection
+│   ├── Mirrored preview
+│   └── Orientation modes
+│
+├── Vision Layer
+│   ├── MediaPipe Hands
+│   ├── MediaPipe Pose
+│   └── MediaPipe Face Mesh
+│
+├── Gesture Intelligence Layer
+│   ├── Landmark geometry
+│   ├── Temporal motion history
+│   ├── Hold/release states
+│   ├── Confidence smoothing
+│   └── Cooldown control
+│
+├── VFX Layer
+│   ├── Canvas compositing
+│   ├── Procedural particles
+│   ├── Energy trails
+│   ├── Shockwaves
+│   ├── Portals
+│   ├── Face overlays
+│   └── Screen shake
+│
+├── Audio Layer
+│   ├── Ambient track
+│   ├── Uploaded music
+│   ├── Activation sounds
+│   └── Impact sounds
+│
+├── Capture Layer
+│   ├── Screenshot engine
+│   ├── Video recorder
+│   ├── Capture gallery
+│   └── Local export
+│
+├── Storage Layer
+│   ├── Local settings
+│   ├── Effect preferences
+│   └── Background preferences
+│
+├── PWA Layer
+│   ├── Manifest
+│   ├── Service worker
+│   └── Offline asset cache
+│
+└── Android Layer
+    ├── Capacitor wrapper
+    ├── Android 10+ configuration
+    ├── Native save/share
+    └── APK build pipeline
+```
+
+---
+
+## 🛠️ Technology Stack
+
+| Area | Technology |
 |---|---|
-| Swipe left/right | Energy Slash |
-| Both fists held | Power Aura Charge; open hands to release |
-| Crossed hands | Energy Shield |
+| Frontend | React 19 |
+| Language | TypeScript 5.9 |
+| Build tool | Vite 8 |
+| Styling | CSS custom properties + responsive CSS |
+| Icons | Lucide React |
+| Hand tracking | MediaPipe Hands |
+| Pose tracking | MediaPipe Pose |
+| Face tracking | MediaPipe Face Mesh |
+| Visual effects | Canvas 2D procedural rendering |
+| Audio | Web Audio API + HTML audio |
+| Recording | MediaRecorder API |
+| Storage | LocalStorage |
+| PWA | Vite PWA plugin |
+| Android wrapper | Capacitor |
+| Android target | Android 10+ |
+| Deployment | GitHub Pages + GitHub Actions |
 
-Additional recognizers include palm thrust, raised fist, downward punch, hands together then push, fast double swipe, circular motion, pinch hold, pinch rotate, arms opened, cupped hands, two open palms, and two-hand circular motion.
+---
 
-## 15 VFX powers
+## 📁 Project Structure
 
-**Superhero:** Energy Shield, Repulsor Blast, Thunder Strike, Ground Shockwave  
-**Anime:** Power Aura Charge, Energy Slash, Ultimate Energy Beam, Teleport Afterimage  
-**Magic:** Mystic Portal, Magic Rune Circle, Phoenix Energy Bird, Telekinetic Orb  
-**Elements:** Fireball, Ice Blast, Wind Vortex
+```text
+GestureVerse-FX-Studio/
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+├── android/
+│   └── Capacitor Android project
+│
+├── branding/
+│   └── Logo and splash assets
+│
+├── public/
+│   ├── audio/
+│   │   └── ambient.wav
+│   ├── icons/
+│   │   ├── icon-192.png
+│   │   └── icon-512.png
+│   └── mediapipe/
+│       ├── hands/
+│       ├── pose/
+│       └── face_mesh/
+│
+├── src/
+│   ├── components/
+│   │   ├── ControlsPanel.tsx
+│   │   ├── EffectsPanel.tsx
+│   │   ├── GalleryModal.tsx
+│   │   ├── Landing.tsx
+│   │   ├── LogoMark.tsx
+│   │   ├── StudioCanvas.tsx
+│   │   └── TutorialModal.tsx
+│   │
+│   ├── data/
+│   │   └── effects.ts
+│   │
+│   ├── gestures/
+│   │   └── GestureEngine.ts
+│   │
+│   ├── hooks/
+│   │   └── useCamera.ts
+│   │
+│   ├── lib/
+│   │   ├── assets.ts
+│   │   ├── AudioEngine.ts
+│   │   ├── math.ts
+│   │   └── storage.ts
+│   │
+│   ├── recording/
+│   │   └── StudioRecorder.ts
+│   │
+│   ├── styles/
+│   │   └── index.css
+│   │
+│   ├── types/
+│   │   └── studio.ts
+│   │
+│   ├── vfx/
+│   │   └── EffectEngine.ts
+│   │
+│   ├── vision/
+│   │   └── VisionEngine.ts
+│   │
+│   ├── App.tsx
+│   └── main.tsx
+│
+├── capacitor.config.ts
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+```
 
-## Requirements
+---
 
-### Website/PWA
+## ⚙️ Advanced Project Workflow
 
-- Node.js 22 recommended
-- Current Chrome or Edge
+### Development workflow
+
+```text
+Install dependencies
+   ↓
+Start Vite development server
+   ↓
+Allow camera access
+   ↓
+Test gestures in live studio
+   ↓
+Tune effect settings
+   ↓
+Create production build
+```
+
+### Gesture-to-effect workflow
+
+```text
+Camera frame captured
+   ↓
+MediaPipe detects landmarks
+   ↓
+Gesture engine analyzes geometry + motion
+   ↓
+Gesture confidence is calculated
+   ↓
+Matching effect is selected
+   ↓
+Effect engine triggers animation
+   ↓
+Audio engine plays synchronized sound
+   ↓
+Recorder captures composed result
+```
+
+### Deployment workflow
+
+```text
+Push source code to GitHub main branch
+   ↓
+GitHub Actions starts deploy.yml
+   ↓
+Node.js 22 environment is prepared
+   ↓
+Dependencies are installed
+   ↓
+Lint validation runs
+   ↓
+Vite builds production assets
+   ↓
+GitHub Pages artifact is uploaded
+   ↓
+Public website is updated
+```
+
+### Android workflow
+
+```text
+Build web application
+   ↓
+Capacitor sync copies web assets
+   ↓
+Android Studio opens native project
+   ↓
+Gradle builds debug APK
+   ↓
+APK installs on Android 10+ device
+```
+
+---
+
+## 💻 Run Locally
+
+### Requirements
+
+- Node.js 22 or newer
+- Chrome or Edge browser
 - Webcam
 
-### Android APK
-
-- Android Studio with Android SDK 36 installed
-- JDK 21
-- Android device or emulator running Android 10 (API 29) or newer
-- USB debugging enabled when installing directly on a phone
-
-## Run the website
+### Install dependencies
 
 ```bash
 npm install
+```
+
+### Start development server
+
+```bash
 npm run dev
 ```
 
-Open the local address printed in the terminal, normally `http://localhost:5173`.
+Open the URL printed in the terminal, usually:
 
-Camera access works on `localhost` during development. A deployed website must use HTTPS.
-
-## Create the production web build
-
-```bash
-npm run build
-npm run preview
+```text
+http://localhost:5173
 ```
 
-The deployable output is generated in `dist/`.
+---
 
-The `dist` folder can be deployed to Cloudflare Pages, Vercel, Netlify, GitHub Pages with SPA configuration, or any static HTTPS host.
+## 🧪 Useful Commands
 
-## Install as an offline PWA
+```bash
+npm run dev          # Start local development server
+npm run lint         # Run ESLint validation
+npm run build        # Type-check and create production build
+npm run preview      # Preview production build locally
+npm run check        # Run lint + production build
+npm run cap:sync     # Build and sync web assets into Android
+npm run android:open # Open Android project in Android Studio
+npm run android:apk  # Build debug APK using local Android toolchain
+```
 
-1. Build and deploy the `dist` folder over HTTPS, or run the production preview locally.
-2. Open the site in Chrome or Edge.
-3. Choose **Install GestureVerse FX Studio** from the browser install button/menu.
-4. Launch it once while online/local assets are available. The application shell and bundled AI resources are then available offline.
+---
 
-The first offline cache is large because the hand, pose, face, and WebAssembly assets are included locally rather than loaded from a CDN.
+## 🌐 Deploy to GitHub Pages
 
-## Build the Android APK
+This project includes a ready-made GitHub Actions workflow:
 
-### Recommended: Android Studio
+```text
+.github/workflows/deploy.yml
+```
+
+After the repository is published to GitHub:
+
+1. Open the repository on GitHub.
+2. Go to **Settings**.
+3. Open **Pages**.
+4. Under **Build and deployment**, choose **GitHub Actions**.
+5. Push to the `main` branch.
+6. Open the **Actions** tab and wait for the deployment to turn green.
+7. Go back to **Settings → Pages** and open the live website URL.
+
+Expected public URL format:
+
+```text
+https://YOUR-GITHUB-USERNAME.github.io/GestureVerse-FX-Studio/
+```
+
+---
+
+## 📱 Android APK Build
+
+### Requirements
+
+- Android Studio
+- Android SDK installed
+- JDK 21
+- Android 10/API 29 or newer device
+- USB debugging enabled for direct phone install
+
+### Build steps
 
 ```bash
 npm install
@@ -95,118 +598,128 @@ npm run cap:sync
 npx cap open android
 ```
 
-In Android Studio:
+Inside Android Studio:
 
-1. Allow Gradle sync to finish.
-2. Connect an Android 10+ phone or start an emulator.
-3. Select **Build > Build Bundle(s) / APK(s) > Build APK(s)**.
-4. Android Studio shows a link to the generated APK.
+```text
+Build → Build Bundle(s) / APK(s) → Build APK(s)
+```
 
-Default APK path:
+Default APK output path:
 
 ```text
 android/app/build/outputs/apk/debug/app-debug.apk
 ```
 
-### Command-line build
+---
 
-```bash
-npm run android:apk
-```
+## 🎮 Demo Flow
 
-On Windows PowerShell, when running Gradle directly:
+For the best college demonstration, follow this sequence:
 
-```powershell
-cd android
-.\gradlew.bat assembleDebug
-```
+1. Launch the app.
+2. Enter **FX Studio**.
+3. Allow camera permission.
+4. Select **Balanced** mode.
+5. Show the hand skeleton and tracking status.
+6. Cross hands to trigger **Energy Shield**.
+7. Hold both fists to charge **Power Aura**.
+8. Release fists to show the ultimate burst.
+9. Swipe left/right to trigger **Energy Slash**.
+10. Enable glowing eyes.
+11. Change background to Blur mode.
+12. Record a short scene.
+13. Open Capture Vault.
+14. Download/export the result.
+15. Mention that the same source can run as website, PWA, and Android APK.
 
-## Android export behaviour
+---
 
-The recorder checks supported formats in this order:
+## 🚦 Performance Modes
 
-1. MP4 with H.264/AAC
-2. MP4
-3. WebM VP9/Opus
-4. WebM VP8/Opus
-5. Generic WebM
+| Mode | Best For | Behaviour |
+|---|---|---|
+| Eco | Older laptops | Lower detection load, reduced particles, face effects off |
+| Balanced | Most laptops | Recommended default for smooth demos |
+| Cinematic | Stronger devices | Higher visual density and stronger effects |
 
-Therefore, Android produces MP4 when the installed Android System WebView exposes MP4 MediaRecorder support; otherwise it safely records WebM. Android exports use the native share/save sheet. Website exports use normal browser downloads.
+### Recognition tips
 
-## Suggested demonstration sequence
+- Use bright front lighting.
+- Keep both hands inside the camera frame.
+- Avoid a very cluttered background.
+- Stand far enough back for shoulders to be visible.
+- Perform motion gestures clearly and deliberately.
 
-1. Start in **Balanced** mode and allow camera access.
-2. Stand far enough back to keep both hands and shoulders visible.
-3. Cross both hands to summon the Energy Shield.
-4. Hold both fists to charge the Power Aura, then open them to release it.
-5. Swipe sharply left or right to trigger the directional Energy Slash.
-6. Preview a portal, fireball, phoenix, and wind vortex from the effect library.
-7. Enable glowing eyes or the face aura.
-8. Switch the background to Blur or upload an image.
-9. Record a short sequence, stop it, and export it from the Capture Vault.
-10. Switch between landscape and portrait layouts.
+---
 
-## Performance guidance
+## 🔐 Privacy-first Design
 
-- **Eco:** older or integrated-GPU laptops; reduced detection cadence; face effects disabled
-- **Balanced:** recommended default for most laptops
-- **Cinematic:** higher tracking cadence and denser effects for stronger hardware
+GestureVerse is built with a local-first philosophy.
 
-For best recognition, use even front lighting, keep the full hand inside the frame, avoid a cluttered background, and make motion gestures deliberately.
+- No login required
+- No cloud AI API
+- No remote video upload
+- No analytics tracker
+- Camera frames are processed on the device
+- Settings are stored locally
+- Captures remain local unless the user exports them
 
-## Architecture
+---
 
-```text
-src/
-├── components/       Studio UI, landing page, controls, tutorial, gallery
-├── data/             15 effect definitions and default mappings
-├── gestures/         Hybrid static + temporal gesture state machine
-├── hooks/            Camera lifecycle and device selection
-├── lib/              Audio engine, math helpers, local settings
-├── recording/        Canvas recorder and web/native export
-├── types/            Shared TypeScript domain types
-├── vfx/              Procedural particle and effect renderer
-└── vision/           Local MediaPipe hands, pose, face pipelines
+## 🧩 Important Notes
 
-public/
-├── audio/            Built-in original ambient track
-├── icons/            PWA identity
-└── mediapipe/        Offline AI runtime and model assets
+- Webcam access requires `localhost` during development or HTTPS after deployment.
+- Gesture accuracy depends on lighting, camera quality, and device performance.
+- Recording format depends on browser or Android WebView codec support.
+- Android MP4 export is attempted when supported; WebM is used as a fallback.
+- The capture vault is session-based, so export important captures before closing the app.
 
-android/              Capacitor Android 10+ project
-branding/             Logo and Android splash source/preview assets
-```
+---
 
-## Privacy
+## 🛣️ Future Scope
 
-Camera frames are processed on the device. The application does not include a login, analytics tracker, remote AI API, or upload service. Preferences are stored in browser local storage. Captures remain in memory until downloaded/exported or the page is closed.
+- Custom gesture training
+- AI background removal
+- Multiplayer gesture battles
+- Timeline-based cinematic editor
+- Cloud gallery with optional login
+- Voice-command effect activation
+- More advanced shader-style effects
+- Mobile-optimized gesture presets
+- Creator mode for custom effect packs
+- Leaderboard or challenge mode
 
-## Important limitations
+---
 
-- Gesture accuracy depends on lighting, camera quality, framing, and device speed.
-- Browser and Android recording codecs depend on the browser/System WebView implementation.
-- Uploaded backgrounds are stored as local data in settings; use compressed images below 8 MB.
-- The capture vault is session-based. Export important captures before closing or refreshing the application.
-- AI background removal is not included; Blur and uploaded-background compositing use the pose segmentation mask.
+## 🏆 Why This Project Stands Out
 
-## Useful commands
+Most webcam gesture projects stop at detection. GestureVerse goes further by combining:
 
-```bash
-npm run dev          # Development server
-npm run build        # Type-check + production build
-npm run preview      # Preview production build
-npm run cap:sync     # Build web app and sync Android assets/plugins
-npm run android:open # Sync and open Android Studio
-npm run android:apk  # Sync and build debug APK with local Android toolchain
-```
+- Real-time AI tracking
+- Gesture state machines
+- Cinematic animation design
+- Audio-reactive feedback
+- Local recording
+- Offline PWA support
+- Android APK packaging
+- GitHub Pages deployment
+- Futuristic UI/UX
+- Privacy-first local processing
 
-## Branding
+That makes it more than a demo. It becomes a complete interactive motion-powered creative studio.
 
-Project title: **GestureVerse FX Studio**  
-Creator credit displayed in the application: **Darshan Paapani**
+---
 
-## Publish through GitHub Pages
+## 👤 Creator
 
-This repository includes `.github/workflows/deploy.yml`. Every push to `main` validates, builds, and deploys the app. The workflow automatically sets Vite's base path from the repository name, so public assets, MediaPipe models, audio, and the PWA work under `https://USERNAME.github.io/REPOSITORY/`.
+**Darshan Paapani**
 
-After pushing the repository, open **Settings → Pages** and choose **GitHub Actions** as the publishing source. The public URL appears in the completed deployment workflow and in the Pages settings.
+---
+
+<div align="center">
+
+## ✨ GestureVerse FX Studio
+
+### **Control the impossible. Record the cinematic. Own the motion.**
+
+</div>
